@@ -11,13 +11,7 @@ a#projects.anchor
                         contclass += ' no-print';
                 div.project(class=contclass)
                     a.anchor(id='project-'+project.id)
-                    -
-                        let projclass = '';
-                        if (project.markWeb)
-                            projclass += ' highlight-web';
-                        if (project.markSystems)
-                            projclass += ' highlight-systems';
-                    div.project-highlight(id='section-project-'+project.id, class=projclass)
+                    div.project-highlight(id='section-project-'+project.id)
                     h4= project.name
                     
                     //- Add possible links

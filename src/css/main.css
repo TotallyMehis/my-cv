@@ -125,31 +125,8 @@ footer {
 	font-size: 16pt;
 }
 
-.nav-bar button.green {
-	--rgb: 0, 255, 0;
-}
-
-.nav-bar button.blue {
-	--rgb: 0, 0, 255;
-}
-
-.nav-bar button {
-	float: right;
-	height: 100%;
-
-	border: none;
-	outline: none;
-
-	transition: 0.1s;
-	background-color: transparent;
-
-	padding: 0 1rem 0 1rem;
-
-	color: #333;
-	font-size: 1.3rem;
-}
-
 .langs {
+
 	display: table;
 	height: 100%;
 

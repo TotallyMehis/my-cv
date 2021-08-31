@@ -15,7 +15,6 @@ zmr:
   tech: C++, Linux, Game Design
   text: |
     Project lead. Creating new code, maintaining Source's large codebase and debugging crashes on Linux & Windows.
-  markSystems: true
   links:
     - name: ModDB
       url: https://www.moddb.com/mods/zombie-master-reborn
@@ -32,7 +31,6 @@ interview:
   text: |
     Streaming video through WebSocket with ExpressJS for the back-end.
     Fully written in TypeScript. Building is done with gulpJS.
-  markWeb: true
 #
 #
 #
@@ -44,7 +42,6 @@ influx:
   text: |
     Working with MySQL/SQLite for record keeping, PHP & Ajax for viewing records through the web.
     Website is built with Bootstrap and builds are automatically deployed to it.
-  markWeb: true
   links:
     website:
       name: Website
@@ -61,7 +58,6 @@ ezauto:
   desc: Memory reading hack for GoldSrc & Source engine games. C++ exercise
   tech: C++, Reverse Engineering
   text: Reads game memory and reacts accordingly, sending inputs to OS.
-  markSystems: true
   links:
     - name: Github
       url: https://github.com/TotallyMehis/EzAuto
@@ -74,7 +70,6 @@ this-site:
   desc: A static website used for displaying all this. 😄
   tech: NodeJS, Eleventy
   text: A static Bootstrap site built with Eleventy. Print compatible. Hosted on Github Pages.
-  markWeb: true
   links:
     - name: Github
       url: https://github.com/TotallyMehis/my-cv
@@ -87,7 +82,6 @@ ssdb:
   desc: A bot that acts as a Source server browser for Discord servers.
   tech: Python, Async, Linux
   text: Queries Valve master servers & game servers, and updates the server list whenever needed.
-  markSystems: true
   links:
     - name: Github
       url: https://github.com/TotallyMehis/source-serverlist-discordbot
@@ -100,7 +94,6 @@ sfuws:
   desc: .NET class library for easy file uploading through HTTP. C# exercise
   tech: C#, .NET, HTTP
   text: HTTP POST-request parsing.
-  markSystems: true
   printHide: true
   links:
     - name: Github

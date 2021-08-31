@@ -12,20 +12,17 @@ languages:
     #
     - name: C/C++
       rating: 5
-      markSystems: true
       refs:
         - zmr
         - ezauto
     #
     - name: C#
       rating: 3
-      markSystems: true
       refs:
         - sfuws
     #
     - name: HTML/CSS
       rating: 4
-      markWeb: true
       refs:
         - interview
         - influx
@@ -33,11 +30,9 @@ languages:
     #
     - name: Java
       rating: 2
-      markSystems: true
     #
     - name: JavaScript
       rating: 4
-      markWeb: true
       refs:
         - interview
         - influx
@@ -48,20 +43,16 @@ languages:
     #
     - name: PHP
       rating: 4
-      markWeb: true
       refs:
         - influx
     #
     - name: Python (3)
       rating: 4
-      markSystems: true
       refs:
         - ssdb
     #
     - name: SQL
       rating: 4
-      markWeb: true
-      markSystems: true
       refs:
         - influx
         - interview
@@ -75,18 +66,15 @@ tools:
     #
     - name: Bash/Shell
       rating: 3
-      markSystems: true
     #
     - name: Batch Script
       rating: 3
-      markSystems: true
     #
     - name: Git (CLI)
       rating: 4
     #
     - name: Make
       rating: 2
-      markSystems: true
     #
     - name: Unity
       rating: 1
@@ -101,38 +89,31 @@ tech:
     #
     - name: .NET
       rating: 1
-      markSystems: true
       refs:
         - sfuws
     #
     - name: Bootstrap
       rating: 4
-      markWeb: true
       refs:
         - this-site
         - influx
     #
     - name: Django
-      markWeb: true
       rating: 1
     #
     - name: ExpressJS
       rating: 3
-      markWeb: true
       refs:
         - interview
     #
     - name: MySQL
       rating: 4
-      markWeb: true
-      markSystems: true
       refs:
         - interview
         - influx
     #
     - name: NodeJS
       rating: 3
-      markWeb: true
       refs:
         - this-site
         - interview
@@ -144,14 +125,11 @@ tech:
     #
     - name: TypeScript
       rating: 4
-      markWeb: true
       refs:
         - interview
     #
     - name: SQLite
       rating: 4
-      markWeb: true
-      markSystems: true
       refs:
         - influx
 

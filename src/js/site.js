@@ -61,27 +61,6 @@ $(document).ready(function() {
 		});
 	});
 
-
-	//
-	// Highlight specific areas of the site when highlight button is pressed.
-	//
-	const highlightFunc = ((name, targetClass) => {
-		$(name).click(function() {
-			// Toggle
-			const state = !$(this).hasClass('pressed');
-	
-			$(targetClass).each(function() {
-				$(this).toggleClass('highlight-now', state);
-			});
-	
-			$(this).toggleClass('pressed', state);
-		});
-	});
-
-
-	highlightFunc('#highlight-toggle-web', '.highlight-web');
-	highlightFunc('#highlight-toggle-systems', '.highlight-systems');
-
 	//
 	// Nav bar that follows you
 	//
