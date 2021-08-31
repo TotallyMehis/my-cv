@@ -1,6 +1,6 @@
 # NodeJS app to build my static CV site
 
-As seen on [the site](https://cv.mehis.xyz/).
+As seen on [the site](https://cv.mehis.dev/).
 
 ## Building & Installation
 1. Run `npm install` once.
@@ -12,5 +12,6 @@ To skip unnecessary steps run `npx eleventy` when changing `.pug` or `.yml` file
 
 ### TODO
 
+- Deploy changes automatically
 - Proper development environment :)
-- Use some front-end framework
+- Use some front-end framework (material design?)
