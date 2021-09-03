@@ -12,6 +12,5 @@ To skip unnecessary steps run `npx eleventy` when changing `.pug` or `.yml` file
 
 ### TODO
 
-- Deploy changes automatically
 - Proper development environment :)
 - Use some front-end framework (material design?)
