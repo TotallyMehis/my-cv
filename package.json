@@ -4,20 +4,32 @@
   "description": "For building my site.",
   "main": "main.js",
   "scripts": {
-    "start": "eleventy && npm run minify && npm run movefiles_final",
-    "dev": "eleventy && npm run movefiles",
-    "minify": "node-minify -c gcc -i src/js/site.js -o _site/js/site.js && node-minify -c clean-css -i src/css/main.css -o _site/css/main.css && node-minify -c clean-css -i src/css/pdf.css -o _site/css/pdf.css",
-    "movefiles": "npx cpy src/css/*.css _site/css/ && npx cpy src/js/*.js _site/js/ && npx cpy src/img/* _site/img/",
-    "movefiles_final": "npx cpy src/img/* _site/img/ && npx cpy src/CNAME _site/"
+    "serve:eleventy": "cross-env ELEVENTY_ENV=development eleventy --serve",
+    "serve:webpack": "webpack --mode development --watch",
+    "build:eleventy": "cross-env ELEVENTY_ENV=production eleventy",
+    "build:webpack": "webpack --mode production",
+    "build": "run-s clean build:*",
+    "clean": "rimraf _site"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^0.12.1",
-    "cpy-cli": "^3.1.1",
+    "bootstrap": "^5.1.0",
+    "cross-env": "^7.0.3",
+    "css-loader": "^6.2.0",
     "deepmerge": "^4.2.2",
+    "filemanager-webpack-plugin": "^6.1.6",
+    "jquery": "^3.6.0",
     "js-yaml": "^3.14.1",
-    "node-minify": "^3.6.0"
+    "mini-css-extract-plugin": "^2.2.2",
+    "npm-run-all": "^4.1.5",
+    "purgecss-webpack-plugin": "^4.0.3",
+    "rimraf": "^2.7.1",
+    "sass-loader": "^12.1.0",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.0",
+    "webpack-cli": "^4.8.0"
   }
 }

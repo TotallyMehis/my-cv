@@ -1,10 +1,6 @@
-'use strict';
+import $ from 'jquery';
 
-function toggleStuff() {
-
-}
-
-$(document).ready(function() {
+$(function() {
 	//
 	// Some old WIP stuff.
 	//
@@ -50,7 +46,7 @@ $(document).ready(function() {
 			}
 	
 			// When clicked, highlight the project section.
-			$(this).click(function() {
+			$(this).on('click', function() {
 				const section = $(sectionName);
 
 				section.addClass('highlight-ref');
@@ -64,12 +60,13 @@ $(document).ready(function() {
 	//
 	// Nav bar that follows you
 	//
-	let navbar = $('#nav-bar');
+	const navbar = $('#nav-bar');
+	const firstSection = $('#section-me');
 
-	// Add a bit in case something goes wrong
-	const stickyPos = $('#section-me').offset().top - navbar.height() - 1;
+	const stickyPos = firstSection.offset().top - navbar.height() - 1; // Offset a bit in case something goes wrong
 
-	$(window).scroll(function() {
+	$(window).on('scroll', function() {
+		
 		if (window.pageYOffset >= stickyPos)
 		{
 			navbar.addClass('sticky');
@@ -83,6 +80,6 @@ $(document).ready(function() {
 	});
 
 	// Make sure the bar appears on refresh.
-	$(window).scroll();
+	$(window).trigger('scroll');
 });
 

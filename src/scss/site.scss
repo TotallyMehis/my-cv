@@ -1,14 +1,11 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
 
-/* TODO: Use sass or some shit */
-:root {
-	--navbar-height: 3.3rem;
-	--anchor-height: -3.3rem;
-	--project-padding: 2.5rem;
+$navbar-height: 3.3rem;
+$anchor-height: -3.3rem;
+$project-padding: 2.5rem;
+$project-anchor-padding: -5.7rem;
+$break-border-color: rgba(0,0,0,0.1);
 
-	--project-anchor-padding: -5.7rem;
-
-	--break-border-color: rgba(0,0,0,0.1);
-}
 
 html {
 	font-size: 0.9em;
@@ -36,12 +33,13 @@ body {
 
 a {
 	transition: 0.2s;
+	text-decoration: none;
 }
 
 a.anchor {
     display: block;
     position: relative;
-    top: var(--anchor-height);
+    top: $anchor-height;
     visibility: hidden;
 }
 
@@ -75,7 +73,7 @@ footer {
 }
 
 .nav-bar {
-	height: var(--navbar-height);
+	height: $navbar-height;
 	width: 100%;
 	overflow: hidden;
 
@@ -206,10 +204,6 @@ footer {
 .social-links-container {
 	display: table;
 	margin: 0 auto;
-}
-
-.social-links-container a {
-	text-decoration: none;
 }
 
 .social-link {
@@ -355,6 +349,12 @@ footer {
 	pointer-events: none;
 }
 
+.reference-list > * {
+	display: inline-block;
+	margin-left: 0.5em;
+	margin-right: 0.5em;
+}
+
 /*
 	TODO: Replace this stuff
 */
@@ -391,12 +391,12 @@ td .skill-ref::after {
 }
 
 .section.projects .project {
-	padding: var(--project-padding) 0;
+	padding: $project-padding 0;
 	transition: 0.5s;
 	position: relative;
 	z-index: 0;
 
-	border-bottom: 1px solid var(--break-border-color);
+	border-bottom: 1px solid $break-border-color;
 
 	margin-bottom: -1px; /* Account for the border. */
 }
@@ -407,7 +407,7 @@ td .skill-ref::after {
 }
 
 .project .anchor {
-	top: var(--project-anchor-padding);
+	top: $project-anchor-padding;
 }
 
 .section.skills table {
