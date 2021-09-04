@@ -4,14 +4,14 @@ a#projects.anchor
         h2.text-center= sections.projects.name
         
         .project-list
-            each project in projects
+            each project, projectId in projects
                 -
                     let contclass = '';
                     if (project.printHide)
                         contclass += ' no-print';
                 div.project(class=contclass)
-                    a.anchor(id='project-'+project.id)
-                    div.project-highlight(id='section-project-'+project.id)
+                    a.anchor(id='project-'+projectId)
+                    div.project-highlight(id='section-project-'+projectId)
                     h4= project.name
                     
                     //- Add possible links

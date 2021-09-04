@@ -10,7 +10,6 @@
 #
 zmr:
   name: 'Zombie Master: Reborn - Game'
-  id: zmr
   desc: A game modification based on the Source game engine combining FPS and RTS genres.
   tech: C++, Linux, Game Design
   text: |
@@ -25,7 +24,6 @@ zmr:
 #
 interview:
   name: Video Interview Web App
-  id: interview
   desc: Real-time video interviewing site made for HAMK to be used in foreign student selection process.
   tech: NodeJS, ExpressJS, TypeScript, MySQL
   text: |
@@ -36,7 +34,6 @@ interview:
 #
 influx:
   name: Influx Timer - Statistics tracker
-  id: influx
   desc: A modular game server plugin for tracking statistics w/ web app
   tech: PHP, Python, SQL, Ajax, SourcePawn
   text: |
@@ -54,7 +51,6 @@ influx:
 #
 ezauto:
   name: EzAuto - Cheat program
-  id: ezauto
   desc: Memory reading hack for GoldSrc & Source engine games. C++ exercise
   tech: C++, Reverse Engineering
   text: Reads game memory and reacts accordingly, sending inputs to OS.
@@ -66,7 +62,6 @@ ezauto:
 #
 this-site:
   name: This Site!
-  id: this-site
   desc: A static website used for displaying all this. 😄
   tech: NodeJS, Eleventy
   text: A static Bootstrap site built with Eleventy. Print compatible. Hosted on Github Pages.
@@ -78,7 +73,6 @@ this-site:
 #
 ssdb:
   name: SSDB - Discord bot
-  id: ssdb
   desc: A bot that acts as a Source server browser for Discord servers.
   tech: Python, Async, Linux
   text: Queries Valve master servers & game servers, and updates the server list whenever needed.
@@ -90,7 +84,6 @@ ssdb:
 #
 sfuws:
   name: SFUWS - File uploader
-  id: sfuws
   desc: .NET class library for easy file uploading through HTTP. C# exercise
   tech: C#, .NET, HTTP
   text: HTTP POST-request parsing.
