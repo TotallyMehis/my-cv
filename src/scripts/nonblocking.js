@@ -37,7 +37,7 @@ $(function() {
 		const hrefTarget = '#'+myId;
 		const sectionName = '#section-project-'+id;
 
-		console.log("Href Target: "+hrefTarget+" | Project section: "+sectionName);
+		console.log('Href Target: '+hrefTarget+' | Project section: '+sectionName);
 
 		// For all the reference links:
 		$('.skill-ref').each(function() {

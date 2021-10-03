@@ -1,6 +1,6 @@
 const yaml = require('js-yaml');
 const fs = require('fs');
-const md = require("markdown-it")({
+const md = require('markdown-it')({
     html: false,
     breaks: true,
     linkify: true
