@@ -34,7 +34,7 @@ function readFromFile(file, quiet = false) {
 
 function readYaml(file, quiet = false) {
     const res = readFromFile(file, quiet);
-    return res ? yaml.safeLoad(res) : null;
+    return res ? yaml.load(res) : null;
 }
 
 function readMarkdown(file, quiet = false) {
