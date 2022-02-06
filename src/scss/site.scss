@@ -212,13 +212,8 @@ footer {
 	padding: 0.5rem 1rem;
 }
 
-.social-link * {
-	display: inline-block;
-}
-
-.social-link p {
+.social-link .text {
 	vertical-align: middle;
-	margin: 0;
 }
 
 .social-link:not(:first-child) {
