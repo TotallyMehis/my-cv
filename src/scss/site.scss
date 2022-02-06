@@ -1,7 +1,7 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
 
+$section-padding-top-bottom: 3rem;
 $navbar-height: 3.3rem;
-$anchor-height: -3.3rem;
 $project-padding: 2.5rem;
 $project-anchor-padding: -5.7rem;
 $break-border-color: rgba(0,0,0,0.1);
@@ -39,7 +39,7 @@ a {
 a.anchor {
     display: block;
     position: relative;
-    top: $anchor-height;
+    top: -($navbar-height + $section-padding-top-bottom);
     visibility: hidden;
 }
 
@@ -234,7 +234,7 @@ footer {
 .section {
 	transition: 0.2s;
 	
-	padding: 3rem 0 3rem 0;
+	padding: $section-padding-top-bottom 0 $section-padding-top-bottom 0;
 	
 	background-color: #ffffff;
 }
