@@ -84,10 +84,16 @@ footer {
 	pointer-events: auto;
 }
 
-.nav-bar p {
+.nav-bar .link-sep {
 	display: table-cell;
 	vertical-align: middle;
 	color: #aaaaaa;
+	pointer-events: none;
+	user-select: none;
+}
+
+.nav-bar .link-sep::after {
+	content: '/';
 }
 
 .nav-bar ul {
@@ -101,12 +107,12 @@ footer {
 	float: left;
 }
 
-#link-top, .link-top-sep {
-	visibility: hidden;
+#link-top {
+	opacity: 25%;
 }
 
-.sticky #link-top, .sticky .link-top-sep {
-	visibility: visible;
+.sticky #link-top {
+	opacity: 100%;
 }
 
 
@@ -445,8 +451,8 @@ td .skill-ref::after {
 		width: 100%;
 	}
 
-	.nav-bar li a {
-		padding: 0 0.5rem;
+	.nav-bar li:last-of-type {
+		width: 33%;
 	}
 }
 
