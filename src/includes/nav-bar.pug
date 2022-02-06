@@ -20,4 +20,4 @@
         .langs
             each lang in translations.langs
                 if lang.id != translations.currentId
-                    a.langs-button(href=lang.link)= lang.shortname
+                    a.langs-button(href=lang.link title=lang.description)= lang.shortname

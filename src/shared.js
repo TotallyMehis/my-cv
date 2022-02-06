@@ -114,13 +114,15 @@ module.exports = {
                     id: '',
                     shortname: 'en',
                     name: 'english',
-                    link: 'index.html'
+                    link: 'index.html',
+                    description: 'Change language to English.'
                 },
                 {
                     id: 'fi',
                     shortname: 'fi',
                     name: 'finnish',
-                    link: 'fi.html'
+                    link: 'fi.html',
+                    description: 'Vaihda suomen kieleksi.'
                 }
             ]
         };
