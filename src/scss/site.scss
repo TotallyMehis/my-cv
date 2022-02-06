@@ -134,7 +134,10 @@ footer {
 	display: table;
 	height: 100%;
 
-	margin: 0 2rem 0 2rem;
+	margin: 0 1rem 0 1rem;
+
+	position: absolute;
+	right: 0;
 }
 
 .langs-button {
@@ -144,6 +147,8 @@ footer {
 	text-transform: uppercase;
 
 	padding: 0 1rem 0 1rem;
+
+	font-size: 1.2rem;
 }
 
 .nav-bar button:hover {
