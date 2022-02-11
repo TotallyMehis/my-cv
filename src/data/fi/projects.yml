@@ -56,10 +56,3 @@ ssdb:
   name: SSDB - Discord botti
   desc: Discord botti joka listaa Source peliservereitä.
   text: Hakee masteri serveiltä tietoja ja päivittää listan tarvittaessa.
-#
-#
-#
-sfuws:
-  name: SFUWS - Tiedoston lähetys-sovellus
-  desc: .NET Class kirjasto joka tekee tiedostojen lähettämisen helpoksi. C# harjoitus
-  text: HTTP POST-haun jäsentely.

@@ -3,14 +3,3 @@ section#section-me.section.me
     .container
         h2.text-center= sections.aboutMe.name
         p!= aboutMe
-        .education.my-text-light
-            p.text-center= sections.aboutMe.educationText
-            table.d-flex.justify-content-center
-                tbody
-                    tr
-                        each edu in sections.aboutMe.education
-                            td
-                                != edu.name
-                                br
-                                != edu.degree
-                                strong!= edu.year

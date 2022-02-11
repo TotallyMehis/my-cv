@@ -4,29 +4,30 @@ head:
 navbar:
   me: Me
   skills: Skills
+  workAndEducation: Work
   projects: Projects
 
 aboutMe:
   name: About Me
-  educationText: Education
-  education:
-    hamk:
-      name: "**Häme University of Applied Sciences**"
-      degree: |
-        Information And Communications Technology, Engineer
-      year: 2019-
-    tavastia:
-      name: "**Tavastia Vocational College** (upper secondary)"
-      degree: |
-        Information And Communications Technology
-        High school diploma
-      year: 2013-2016
 
-skillLists:
+workAndEducation:
+  name: Work & Education
+
+shortStuff:
+  education: ICT, Engineer
+  work: Software Developer
+  location: Riihimäki, Finland
+
+skills:
   name: Skills
-  desc: |
-    How familiar I am with each subject. **More is better.**
+  content:
+    - I am **proficient in multiple programming languages** such as C/C++, JavaScript and Python.
+    - I have **worked on native applications**, often supporting multiple platforms.
+    - I am **familiar with web development** & the NodeJS ecosystem.
+    - I am **a fast and independant learner**.
+    - I have worked on multitude of projects in different roles.
+    - I have **built continuous integration/deployment** pipelines.
+    - I am familiar with Scrum processes and have worked in projects using them.
 
 projects:
-  name: Projects / Stuff I've done
-
+  name: Side Projects

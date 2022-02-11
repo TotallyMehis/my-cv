@@ -56,6 +56,9 @@ module.exports = {
         }
 
 
+        // Arrays are overridden
+        const arrayMergeFn = (target, source, options) => source
+
         // Merge two objects together.
         const mergeFunc = ((func, file) => {
             // Same path, no reason to merge.
@@ -71,7 +74,7 @@ module.exports = {
                 return res;
             }
 
-            const merged =  deepmerge(res, res2);
+            const merged = deepmerge(res, res2, { arrayMerge: arrayMergeFn });
 
             //console.log(merged);
 
@@ -95,6 +98,7 @@ module.exports = {
         data.skillLists = mergeFunc(readYaml, 'skills.yml');
         data.aboutMe = readSingle(readMarkdown, 'about_me.md');
         data.sections = mergeFunc(readYaml, 'sections.yml');
+        data.wne = mergeFunc(readYaml, 'work_n_education.yml');
 
 
         // Translate markdown to html
@@ -105,7 +109,7 @@ module.exports = {
             edu.degree = toMd(edu.degree);
         }
         
-        data.sections.skillLists.desc = toMd(data.sections.skillLists.desc);
+        data.sections.skills.content = data.sections.skills.content.map(content => toMd(content))
 
         data.translations = {
             currentId: lang,

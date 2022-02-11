@@ -1,26 +1,31 @@
 navbar:
   me: Minä
   skills: Taidot
+  workAndEducation: Työt
   projects: Projektit
 
 aboutMe:
   name: Hieman minusta
-  educationText: Koulutus
-  education:
-    hamk:
-      name: "**HAMK**"
-      degree: |
-        Tieto- ja viestintätekniikka, insinööri
-    tavastia:
-      name: "**Ammattiopisto Tavastia**"
-      degree: |
-        Tieto- ja viestintätekniikan perustutkinto
-        Ylioppilas tutkinto
 
-skillLists:
-  name: "Taidot"
-  desc: Määrä kertoo **kuinka tuttu aihe on**.
+workAndEducation:
+  name: Työ & Koulutus
+
+shortStuff:
+  education: ICT, Insinööri
+  work: Ohjelmistokehittäjä
+  location: Riihimäki
+
+skills:
+  name: Taidot
+  content:
+    - Olen **pätevä monessa ohjelmointikielessä**, kuten C/C++, Javascript ja Python.
+    - Olen **kehittänyt natiiveja ohjelmistoja**, tukien useita alustoja.
+    - '**Web kehitys** & NodeJS ekosysteemi ovat minulle tuttuja.' 
+    - Olen **nopea ja itsenäinen oppija**.
+    - Olen **työskennellyt useissa rooleissa**.
+    - Olen **rakentanut CI/CD pipelinejä**.
+    - Scrum prosessit ovat minulle tuttuja ja olen työskennellyt projekteissa jotka käyttävät niitä.
 
 projects:
-  name: Projektit / Juttuja
+  name: Sivu Projekteja
 

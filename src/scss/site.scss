@@ -2,7 +2,7 @@
 
 $section-padding-top-bottom: 3rem;
 $navbar-height: 3.3rem;
-$project-padding: 2.5rem;
+$project-padding: 2rem;
 $project-anchor-padding: -5.7rem;
 $break-border-color: rgba(0,0,0,0.1);
 
@@ -20,13 +20,8 @@ body {
 	margin: 0;
 	padding: 0;
 	
-	background-color: #f2f2f2;
+	background-color: white;
 	color: #333;
-	
-	background-repeat: repeat;
-	/*background-size: cover;*/
-	background-position: top center;
-	background-image: url('../img/bg001.jpg');
 
 	overflow-x: hidden;
 }
@@ -52,6 +47,10 @@ footer {
 	padding-bottom: 10px;
 	
 	font-size: 8pt;
+}
+
+.container {
+	max-width: 700px;
 }
 
 /* Hide pdf/print-only elements. */
@@ -100,7 +99,7 @@ footer {
 	display: table;
 	list-style: none;
 	margin: 0;
-	margin-left: 2rem;
+	margin-left: 0.5rem;
 	padding: 0;
 	vertical-align: middle;
 	height: 100%;
@@ -179,18 +178,22 @@ footer {
 	text-transform: uppercase;
 }
 
-.site-head p {
-	vertical-align: middle;
-	pointer-events: none;
-	user-select: none;
-}
-
 .head-center {
-	width: 400px;
 	max-width: 100%;
 	max-height: 100%;
 	margin: auto;
 	padding-top: 10px;
+}
+
+.head-center .title {
+    text-align: center;
+	font-weight: 100;
+}
+
+.head-center .sub-title {
+    text-align: center;
+	font-size: 1.25rem;
+	font-weight: 100;
 }
 
 .head-image {
@@ -207,19 +210,13 @@ footer {
 	/*border-color: white;*/
 }
 
-.title-text {
-	font-size: 1.5rem;
-	font-weight: 300;
-	text-align: center;
-}
-
 .social-links-container {
-	display: table;
-	margin: 0 auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .social-link {
-	display: table-cell;
 	padding: 0.5rem 1rem;
 }
 
@@ -227,20 +224,14 @@ footer {
 	vertical-align: middle;
 }
 
-.social-link:not(:first-child) {
-	margin-left: 1rem;
-}
-
 .section {
 	transition: 0.2s;
 	
 	padding: $section-padding-top-bottom 0 $section-padding-top-bottom 0;
-	
-	background-color: #ffffff;
 }
 
 .desc {
-	font-size: 14pt;
+	font-size: 12pt;
 	margin-bottom: 0.5rem;
 }
 
@@ -253,7 +244,11 @@ footer {
 	vertical-align: top;
 }
 
-.project h4 {
+h3 {
+	font-size: 1.45rem;
+}
+
+.project h3 {
 	margin-bottom: 1rem;
 	display: inline-block;
 }
@@ -304,13 +299,6 @@ footer {
 	margin-left: 0.1rem;
 }
 
-.skill-ref {
-	font-size: 8pt;
-	vertical-align: top;
-	text-align: left;
-	padding: 0 0.2rem;
-}
-
 .highlight-web {
 	transition: 1s;
 	background-color: transparent;
@@ -356,39 +344,77 @@ footer {
 	margin-right: 0.5em;
 }
 
+.skill {
+	margin: 0.25rem;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+	border-radius: 15px;
+	background-color: #e0e0ff;
+}
+
+.skill-list {
+	display: flex;
+	flex-wrap: wrap;
+
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
+}
+
+.skill-list-container {
+	margin: 1rem 0 1rem 0;
+}
+
 /*
 	TODO: Replace this stuff
 */
-td .skill-ref[href='#project-zmr']::before {
+.skill-ref[href='#project-zmr']::before {
 	content: '[1';
 }
 
-td .skill-ref[href='#project-influx']::before {
+.skill-ref[href='#project-influx']::before {
 	content: '[2';
 }
 
-td .skill-ref[href='#project-ezauto']::before {
+.skill-ref[href='#project-ezauto']::before {
 	content: '[3';
 }
 
-td .skill-ref[href='#project-sfuws']::before {
+.skill-ref[href='#project-sfuws']::before {
 	content: '[4';
 }
 
-td .skill-ref[href='#project-ssdb']::before {
+.skill-ref[href='#project-ssdb']::before {
 	content: '[5';
 }
 
-td .skill-ref[href='#project-interview']::before {
+.skill-ref[href='#project-interview']::before {
 	content: '[6';
 }
 
-td .skill-ref[href='#project-this-site']::before {
+.skill-ref[href='#project-this-site']::before {
 	content: '[7';
 }
 
-td .skill-ref::after {
+.skill-ref::after {
 	content: ']';
+}
+
+
+.project {
+	border-bottom: 1px solid $break-border-color;
+
+	margin-bottom: -1px; /* Account for the border. */
+}
+
+.project:last-child {
+	border-bottom: none;
+	margin-bottom: 0;
+}
+
+.section.work-n-education .project {
+	margin-bottom: 1rem;
 }
 
 .section.projects .project {
@@ -396,28 +422,10 @@ td .skill-ref::after {
 	transition: 0.5s;
 	position: relative;
 	z-index: 0;
-
-	border-bottom: 1px solid $break-border-color;
-
-	margin-bottom: -1px; /* Account for the border. */
-}
-
-.section.projects .project:last-child {
-	border-bottom: none;
-	margin-bottom: 0;
 }
 
 .project .anchor {
 	top: $project-anchor-padding;
-}
-
-.section.skills table {
-	margin: 0 auto;
-	white-space: nowrap;
-}
-
-.section.skills .col-sm {
-	margin: 0.5rem 0 0 0;
 }
 
 .my-text-light {
@@ -446,7 +454,7 @@ td .skill-ref::after {
 	}
 }
 
-@media (max-width: 450px) {
+@media (max-width: 480px) {
 	.nav-bar .langs {
 		display: none;
 	}
@@ -455,9 +463,13 @@ td .skill-ref::after {
 		margin: 0 auto;
 		width: 100%;
 	}
+}
 
-	.nav-bar li:last-of-type {
-		width: 33%;
+/* This can't be in the print specific css file for some reason. */
+@media print {
+    .page-break {
+		page-break-before: always;
+		height: 0.5in;
 	}
 }
 

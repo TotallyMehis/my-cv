@@ -79,15 +79,3 @@ ssdb:
   links:
     - name: Github
       url: https://github.com/TotallyMehis/source-serverlist-discordbot
-#
-#
-#
-sfuws:
-  name: SFUWS - File uploader
-  desc: .NET class library for easy file uploading through HTTP. C# exercise
-  tech: C#, .NET, HTTP
-  text: HTTP POST-request parsing.
-  printHide: true
-  links:
-    - name: Github
-      url: https://github.com/TotallyMehis/sfuws

@@ -1,34 +1,22 @@
 section.section.skills
     a#skills.anchor
     .container
-        h2.text-center= sections.skillLists.name
-        p.my-text-light.text-center-no-pdf!= sections.skillLists.desc
+        h2.text-center= sections.skills.name
 
-        - const MAX_RATING = 5;
-        .row
-            each skillList in skillLists
-                .col-sm
-                    h4.text-center= skillList.name
-                    -
-                        let list_classes = ' ';
-                        if (skillList.skills.length > 5)
-                            list_classes += 'print-skill-do-columns';
-                    div(class='skill-list'+list_classes)
-                        table
-                            tbody
-                                each skill in skillList.skills
-                                    tr
-                                        td.skill-text
-                                            .skill-name= skill.name
-                                            - if (skill.refs)
-                                                each ref in skill.refs
-                                                    a.skill-ref(href='#project-'+ref)
-                                        //- Skill rating
-                                        td
-                                            - for (let i = 0; i < skill.rating; i++)
-                                                | &block;
-                                            - const out_of = MAX_RATING - skill.rating;
-                                            - for (let i = 0; i < out_of; i++)
-                                                | &blk14;
-                            //- End of skill loop
-            //- End of skill list loop
+        ul
+            each skill in sections.skills.content
+                li!= skill
+
+        each skillList in skillLists
+            .skill-list-container
+                h3= skillList.name
+                .skill-list
+                    each skill in skillList.skills
+                        span.skill
+                            = skill.name
+                            //- - if (skill.refs)
+                            //-     each ref in skill.refs
+                            //-         sup
+                            //-             a.skill-ref(href='#project-'+ref)
+                //- End of skill loop
+        //- End of skill list loop

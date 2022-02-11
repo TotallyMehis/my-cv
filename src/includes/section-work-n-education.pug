@@ -1,0 +1,9 @@
+section.section.work-n-education
+    a#work-n-education.anchor
+    .container
+        h2.text-center=sections.workAndEducation.name
+        each we in wne
+            .project
+                h3= we.name
+                p= we.time
+                p= we.description
