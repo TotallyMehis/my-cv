@@ -15,9 +15,11 @@ zmr:
   text: |
     Project lead. Creating new code, maintaining Source's large codebase and debugging crashes on Linux & Windows.
   links:
-    - name: Website
+    website:
+      name: Website
       url: https://zombiemaster.dev
-    - name: Github
+    github:
+      name: Github
       url: https://github.com/zm-reborn/zmr-game
 #
 #

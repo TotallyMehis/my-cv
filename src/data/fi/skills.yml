@@ -1,0 +1,20 @@
+#
+#
+#
+languages:
+  name: Ohjelmointikielet
+#
+#
+#
+tools:
+  name: Työkalut
+#
+#
+#
+tech:
+  name: Frameworkit
+#
+#
+#
+other:
+  name: Muut
