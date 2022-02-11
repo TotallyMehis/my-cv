@@ -2,25 +2,20 @@
     ul
         li#link-top
             a(href='#')
-                .selector-ele
-                    svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16").align-baseline
-                        path(d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z")
+                svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16").align-baseline
+                    path(d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z")
         span.link-sep
         li#link-me
-            a(href='#me')
-                .selector-ele= sections.navbar.me
+            a(href='#me')= sections.navbar.me
         span.link-sep
         li#link-skills
-            a(href='#skills')
-                .selector-ele= sections.navbar.skills
+            a(href='#skills')= sections.navbar.skills
         span.link-sep
         li#link-work
-            a(href='#work-n-education')
-                .selector-ele= sections.navbar.workAndEducation
+            a(href='#work-n-education')= sections.navbar.workAndEducation
         span.link-sep
         li#link-stuff
-            a(href='#projects')
-                .selector-ele= sections.navbar.projects
+            a(href='#projects')= sections.navbar.projects
         .langs
             each lang in translations.langs
                 if lang.id != translations.currentId
