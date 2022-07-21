@@ -1,7 +1,7 @@
+$break-border-color: #e6e6e6;
+
 :root {
     --project-padding: 1rem;
-
-    --break-border-color: rgba(0,0,0,0.2);
 }
 
 @page {
@@ -95,7 +95,7 @@ p {
 
 h2 {
     font-size: 1.5rem;
-    border-bottom: 1px solid var(--break-border-color);
+    border-bottom: 1px solid $break-border-color;
 }
 
 h3 {
