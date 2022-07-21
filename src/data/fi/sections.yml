@@ -19,12 +19,12 @@ skills:
   name: Taidot
   content:
     - Olen **pätevä monessa ohjelmointikielessä**, kuten C/C++, Javascript ja Python.
-    - Olen **kehittänyt natiiveja ohjelmistoja**, tukien useita alustoja.
-    - '**Web kehitys** & NodeJS ekosysteemi ovat minulle tuttuja.' 
+    - Olen **kehittänyt natiivi-ohjelmia**, usein tukien useita alustoja.
+    - '**Web-kehitys** & NodeJS-ekosysteemi ovat minulle tuttuja.' 
     - Olen **nopea ja itsenäinen oppija**.
-    - Olen **työskennellyt useissa rooleissa**.
-    - Olen **rakentanut CI/CD pipelinejä**.
-    - Scrum prosessit ovat minulle tuttuja ja olen työskennellyt projekteissa jotka käyttävät niitä.
+    - Olen **työskennellyt useassa projektissa eri rooleissa**.
+    - Olen **rakentanut continuous integration ja deployment pipelinejä**.
+    - Scrum-prosessit ovat minulle tuttuja ja olen työskennellyt projekteissa jotka käyttävät niitä.
 
 projects:
   name: Sivu Projekteja

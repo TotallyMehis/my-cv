@@ -54,8 +54,6 @@ languages:
     #
     - name: Lua
       rating: 2
-    #
-    - name: Ruby
 
 
 #
