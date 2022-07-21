@@ -4,7 +4,7 @@ $section-padding-top-bottom: 3rem;
 $navbar-height: 3.3rem;
 $project-padding: 2rem;
 $project-anchor-padding: -5.7rem;
-$break-border-color: rgba(0,0,0,0.1);
+$break-border-color: #e6e6e6;
 
 
 html {
@@ -65,7 +65,7 @@ footer {
 
 .nav-bar.sticky {
 	background-color: white;
-	border-bottom: 1px solid rgba(0,0,0,0.1);
+	border-bottom: 1px solid $break-border-color;
 	z-index: 100;
 
 	pointer-events: auto; /* Re-enable pointer events. */
@@ -364,7 +364,7 @@ h3 {
 }
 
 .skill-list-container {
-	margin: 1rem 0 1rem 0;
+	margin: 2rem 0 2rem 0;
 }
 
 /*
@@ -495,3 +495,31 @@ h3 {
 .text-center-no-pdf {
 	text-align: center;
 }
+
+/* Work in progress dark mode. */
+// @media (prefers-color-scheme: dark) {
+// 	$break-border-color: #333;
+
+// 	body {
+// 		background-color: #1e1e1e;
+// 		color: #ddd;
+// 	}
+
+// 	.site-head {
+// 		background-image: url("../img/bg002_mono.jpg");
+// 	}
+
+// 	.project {
+// 		border-bottom: 1px solid $break-border-color;
+// 	}
+
+// 	.nav-bar.sticky {
+// 		background-color: #282828;
+// 		border-bottom: 1px solid #2c2c2c;
+// 	}
+
+// 	.skill {
+// 		background-color: #2e2e41;
+// 	}
+	
+// }
