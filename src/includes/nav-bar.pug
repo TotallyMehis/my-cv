@@ -16,7 +16,7 @@
         span.link-sep
         li#link-stuff
             a(href='#projects')= sections.navbar.projects
-        .langs
-            each lang in translations.langs
-                if lang.id != translations.currentId
-                    a.langs-button(href=lang.link title=lang.description aria-label=lang.description)= lang.shortname
+    span.langs
+        each lang in translations.langs
+            if lang.id != translations.currentId
+                a.langs-button(href=lang.link title=lang.description aria-label=lang.description lang=lang.id || 'en')= lang.shortname
