@@ -1,4 +1,5 @@
 $break-border-color: #e6e6e6;
+$page-margin: 1.9cm;
 
 :root {
     --project-padding: 1rem;
@@ -16,15 +17,14 @@ p {
     margin-bottom: 0.8rem;
 }
 
-/* The default A4 margins are 1 inch. */
 .container {
-    padding-left: 1in;
-    padding-right: 1in;
+    padding-left: $page-margin;
+    padding-right: $page-margin;
 
     max-width: none !important;
 }
 
-.container > p {
+.container > *:not(h2) {
     margin-left: 1rem;
     margin-right: 1rem;
 }
@@ -63,30 +63,9 @@ p {
     display: none;
 }
 
-.project-list {
-    column-count: 2;
 
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-.section.projects .project {
-    break-inside: avoid-column;
-    page-break-inside: avoid;
-
-    /* Kinda hacky */
-    height: 260px;
-}
-
-.section.projects .project:nth-of-type(3),
-.section.projects .project:nth-of-type(6) {
+.last-before-page-break {
     border-bottom: none;
-    /*margin-bottom: 0;*/
-}
-
-.section.work-n-education .project {
-	margin-left: 1rem;
-	margin-right: 1rem;
 }
 
 .section {

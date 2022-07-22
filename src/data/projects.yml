@@ -48,6 +48,7 @@ influx:
     github:
       name: Github
       url: https://github.com/InfluxTimer
+  pageBreak: true
 #
 #
 #
