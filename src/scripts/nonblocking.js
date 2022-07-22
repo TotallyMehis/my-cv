@@ -1,85 +1,38 @@
-import $ from 'jquery';
+function onLoad() {
+  //
+  // Nav bar that follows you
+  //
 
-$(function() {
-	//
-	// Some old WIP stuff.
-	//
+  /** @type {HTMLElement | null} */
+  const navbar = document.querySelector('#nav-bar')
+  /** @type {HTMLElement | null} */
+  const firstSection = document.querySelector('main')
 
-	// const registerBtn = (btnName, sectionName) => {
-	// 	//let tap = ('ontouchstart' in document.documentElement);
-	// 	//if (tap)
-	// 	//	return;
-		
-		
-	// 	$(btnName).mouseenter(function() {
-	// 		$(sectionName).css('background-color', highlightColor);
-	// 	});
-	// 	$(btnName).mouseleave(function() {
-	// 		$(sectionName).css('background-color', '#ffffff');
-	// 	});
-	// }
-	//registerBtn('#link-me', '.section.me');
-	//registerBtn('#link-stuff', '.section.stuff');
-	//registerBtn('#link-skills', '.section.skills');
+  if (!navbar || !firstSection) {
+    console.error('Unable to find nav bar or content start!')
+    return
+  }
 
+  const stickyPos = firstSection.offsetTop - navbar.clientHeight // Offset a bit in case something goes wrong
 
+  //console.debug('Main content starts:', firstSection.offsetTop, 'Nav bar height:', navbar.clientHeight, 'Sticky pos:', stickyPos)
 
-	//
-	//  When clicked on a project reference, highlight said project.
-	//
+  const onScroll = () => {
+    //console.debug('Current pos:', window.pageYOffset)
+    if (window.pageYOffset >= stickyPos) {
+      navbar.classList.add('sticky')
+      navbar.classList.remove('position-absolute')
+    }
+    else {
+      navbar.classList.add('position-absolute')
+      navbar.classList.remove('sticky')
+    }
+  }
 
-	// Find all the possible projects and register the highlight.
-	$('[id^=project-]').each(function() {
-		const myId = $(this).attr('id');
-		const id = myId.replace(/project-/, '');
+  window.addEventListener('scroll', onScroll)
 
+  // Make sure the bar appears on refresh.
+  onScroll()
+}
 
-		const hrefTarget = '#'+myId;
-		const sectionName = '#section-project-'+id;
-
-		console.log('Href Target: '+hrefTarget+' | Project section: '+sectionName);
-
-		// For all the reference links:
-		$('.skill-ref').each(function() {
-			if ($(this).attr('href') !== hrefTarget) {
-				return;
-			}
-	
-			// When clicked, highlight the project section.
-			$(this).on('click', function() {
-				const section = $(sectionName);
-
-				section.addClass('highlight-ref');
-				setTimeout(function() {
-					section.removeClass('highlight-ref');
-				}, 1000);
-			});
-		});
-	});
-
-	//
-	// Nav bar that follows you
-	//
-	const navbar = $('#nav-bar');
-	const firstSection = $('#section-me');
-
-	const stickyPos = firstSection.offset().top - navbar.height() - 1; // Offset a bit in case something goes wrong
-
-	$(window).on('scroll', function() {
-		
-		if (window.pageYOffset >= stickyPos)
-		{
-			navbar.addClass('sticky');
-			navbar.removeClass('position-absolute');
-		}
-		else
-		{
-			navbar.addClass('position-absolute');
-			navbar.removeClass('sticky');
-		}
-	});
-
-	// Make sure the bar appears on refresh.
-	$(window).trigger('scroll');
-});
-
+document.readyState === 'complete' ? onLoad() : window.addEventListener('load', onLoad)
