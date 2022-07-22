@@ -1,20 +1,20 @@
 #nav-bar.nav-bar.position-absolute
-    ul
-        li#link-top
+    span.navigation
+        span.nav-button#link-top
             a(href='#')
                 svg(xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16").align-baseline
                     path(d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z")
         span.link-sep
-        li#link-me
+        span.nav-button#link-me
             a(href='#me')= sections.navbar.me
         span.link-sep
-        li#link-skills
+        span.nav-button#link-skills
             a(href='#skills')= sections.navbar.skills
         span.link-sep
-        li#link-work
+        span.nav-button#link-work
             a(href='#work-n-education')= sections.navbar.workAndEducation
         span.link-sep
-        li#link-stuff
+        span.nav-button#link-stuff
             a(href='#projects')= sections.navbar.projects
     span.langs
         each lang in translations.langs

@@ -95,20 +95,18 @@ footer {
 	pointer-events: auto;
 }
 
-.nav-bar .link-sep {
-	display: table-cell;
+.nav-bar .navigation .link-sep {
 	vertical-align: middle;
 	color: #aaaaaa;
 	pointer-events: none;
 	user-select: none;
 }
 
-.nav-bar .link-sep::after {
+.nav-bar .navigation .link-sep::after {
 	content: '/';
 }
 
-.nav-bar ul {
-	display: table;
+.nav-bar .navigation {
 	list-style: none;
 	margin: 0;
 	margin-left: 0.5rem;
@@ -116,6 +114,8 @@ footer {
 	vertical-align: middle;
 	height: 100%;
 	float: left;
+	display: flex;
+	align-items: center;
 }
 
 #link-top {
@@ -127,22 +127,22 @@ footer {
 }
 
 
-.nav-bar li {
-	display: table-cell;
-	vertical-align: middle;
+.nav-bar .navigation .nav-button {
 	text-align: center;
-}
 
-.nav-bar li a {
-	display: block;
 	margin: 0 0.6rem;
+	flex-grow: 1;
 	
 	font-size: 16pt;
 }
 
-.langs {
+/*.nav-bar .navigation .nav-button:first-child {
+	width: 50px;
+}*/
 
-	display: table;
+.langs {
+	display: flex;
+	align-items: center;
 	height: 100%;
 
 	margin: 0 1rem 0 1rem;
@@ -152,7 +152,6 @@ footer {
 }
 
 .langs-button {
-	display: table-cell;
 	vertical-align: middle;
 
 	text-transform: uppercase;
@@ -471,26 +470,26 @@ h3 {
 		display: none;
 	}
 	
-	.nav-bar ul {
+	.nav-bar .navigation {
 		margin: 0 auto;
 		width: 100%;
 	}
 }
 
 @media (max-width: 400px) {
-	.nav-bar li a {
+	.nav-bar .navigation .nav-button {
 		font-size: 14pt;
 	}
 }
 
 @media (max-width: 360px) {
-	.nav-bar li a {
+	.nav-bar .navigation .nav-button {
 		font-size: 12pt;
 	}
 }
 
 @media (max-width: 325px) {
-	.nav-bar li a {
+	.nav-bar .navigation .nav-button {
 		font-size: 10pt;
 	}
 }
