@@ -13,11 +13,10 @@ function onLoad() {
     return
   }
 
-  const stickyPos = firstSection.offsetTop - navbar.clientHeight // Offset a bit in case something goes wrong
-
-  //console.debug('Main content starts:', firstSection.offsetTop, 'Nav bar height:', navbar.clientHeight, 'Sticky pos:', stickyPos)
-
   const onScroll = () => {
+    const stickyPos = firstSection.offsetTop - navbar.clientHeight
+    //console.debug('Main content starts:', firstSection.offsetTop, 'Nav bar height:', navbar.clientHeight, 'Sticky pos:', stickyPos)
+
     //console.debug('Current pos:', window.pageYOffset)
     if (window.pageYOffset >= stickyPos) {
       navbar.classList.add('sticky')
