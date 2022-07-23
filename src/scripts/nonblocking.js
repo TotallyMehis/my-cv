@@ -6,19 +6,19 @@ function onLoad() {
   /** @type {HTMLElement | null} */
   const navbar = document.querySelector('#nav-bar')
   /** @type {HTMLElement | null} */
-  const firstSection = document.querySelector('main')
+  const firstAnchor = document.querySelector('#me')
 
-  if (!navbar || !firstSection) {
+  if (!navbar || !firstAnchor) {
     console.error('Unable to find nav bar or content start!')
     return
   }
 
   const onScroll = () => {
-    const stickyPos = firstSection.offsetTop - navbar.clientHeight
-    //console.debug('Main content starts:', firstSection.offsetTop, 'Nav bar height:', navbar.clientHeight, 'Sticky pos:', stickyPos)
+    // Offset a bit to account some mobile devices.
+    const stickyPos = firstAnchor.offsetTop - 1
+    //console.debug('Main content starts:', firstAnchor.offsetTop, 'Sticky pos:', stickyPos, 'Current pos:', window.scrollY)
 
-    //console.debug('Current pos:', window.pageYOffset)
-    if (window.pageYOffset >= stickyPos) {
+    if (window.scrollY >= stickyPos) {
       navbar.classList.add('sticky')
       navbar.classList.remove('position-absolute')
     }
