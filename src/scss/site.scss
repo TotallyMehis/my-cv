@@ -472,6 +472,18 @@ h3 {
 	}
 }
 
+@media (max-width: 430px) {
+	.social-link svg {
+		display: block;
+		margin: 0 auto;
+	}
+
+	.social-link .text {
+		display: block;
+		text-align: center;
+	}
+}
+
 @media (max-width: 400px) {
 	.nav-bar .navigation .nav-button {
 		font-size: 14pt;
