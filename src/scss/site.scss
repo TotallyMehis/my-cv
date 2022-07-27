@@ -173,10 +173,12 @@ footer {
 }
 
 .site-head {
-	background-repeat: repeat;
+	background-image: linear-gradient(135deg, #ffea8f, #d694c0);
+
+	/*background-repeat: repeat;
 	background-size: cover;
 	background-position: top center;
-	background-image: url('../img/bg002.jpg');
+	background-image: url('../img/bg002.jpg');*/
 	
 	overflow: hidden;
 }
