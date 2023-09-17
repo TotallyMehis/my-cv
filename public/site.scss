@@ -1,11 +1,12 @@
-@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~bootstrap/scss/bootstrap';
 
-$section-padding-top-bottom: 3rem;
-$navbar-height: 3.3rem;
-$project-padding: 2rem;
-$project-anchor-padding: -5.7rem;
-$break-border-color: #e6e6e6;
-
+:root {
+	--section-padding-top-bottom: 3rem;
+	--navbar-height: 3.3rem;
+	--project-padding: 2rem;
+	--project-anchor-padding: -5.7rem;
+	--break-border-color: #e6e6e6;
+}
 
 html {
 	font-size: 0.9em;
@@ -19,7 +20,7 @@ html {
 body {
 	margin: 0;
 	padding: 0;
-	
+
 	background-color: white;
 	color: #333;
 
@@ -34,7 +35,7 @@ a {
 a.anchor {
     display: block;
     position: relative;
-    top: -($navbar-height + $section-padding-top-bottom);
+    top: calc(-1 * (var(--navbar-height) + var(--section-padding-top-bottom)));
     visibility: hidden;
 }
 
@@ -45,7 +46,7 @@ h2 {
 footer {
 	margin-top: 120px;
 	padding-bottom: 10px;
-	
+
 	font-size: 8pt;
 }
 
@@ -77,14 +78,14 @@ footer {
 
 .nav-bar.sticky {
 	background-color: white;
-	border-bottom: 1px solid $break-border-color;
+	border-bottom: 1px solid var(--break-border-color);
 	z-index: 100;
 
 	pointer-events: auto; /* Re-enable pointer events. */
 }
 
 .nav-bar {
-	height: $navbar-height;
+	height: var(--navbar-height);
 	width: 100%;
 	overflow: hidden;
 
@@ -97,13 +98,9 @@ footer {
 
 .nav-bar .navigation .link-sep {
 	vertical-align: middle;
-	color: #aaaaaa;
+	color: #00000015;
 	pointer-events: none;
 	user-select: none;
-}
-
-.nav-bar .navigation .link-sep::after {
-	content: '/';
 }
 
 .nav-bar .navigation {
@@ -128,9 +125,9 @@ footer {
 .nav-bar .navigation .nav-button {
 	text-align: center;
 
-	margin: 0 0.6rem;
+	margin: 0 1.1rem;
 	flex-grow: 1;
-	
+
 	font-size: 16pt;
 }
 
@@ -179,7 +176,7 @@ footer {
 	background-size: cover;
 	background-position: top center;
 	background-image: url('../img/bg002.jpg');*/
-	
+
 	overflow: hidden;
 }
 
@@ -230,12 +227,13 @@ footer {
 
 .social-link .text {
 	vertical-align: middle;
+	margin-left: 0.25rem;
 }
 
 .section {
 	transition: 0.2s;
-	
-	padding: $section-padding-top-bottom 0 $section-padding-top-bottom 0;
+
+	padding: var(--section-padding-top-bottom) 0 var(--section-padding-top-bottom) 0;
 }
 
 .desc {
@@ -264,7 +262,7 @@ h3 {
 .project .links {
 	display: inline-block;
 	word-spacing: 4pt;
-	
+
 	margin-left: 1.5rem;
 	margin-bottom: 0rem;
 }
@@ -411,14 +409,14 @@ h3 {
 
 
 .project {
-	border-bottom: 1px solid $break-border-color;
+	border-bottom: 1px solid var(--break-border-color);
 
 	padding-top: 0.5rem;
-	padding-bottom: $project-padding;
+	padding-bottom: var(--project-padding);
 }
 
 .project ~ .project {
-	padding-top: $project-padding;
+	padding-top: var(--project-padding);
 }
 
 .project:last-child {
@@ -432,14 +430,14 @@ h3 {
 }
 
 .project .anchor {
-	top: $project-anchor-padding;
+	top: var(--project-anchor-padding);
 }
 
 .my-text-light {
 	color: #777777;
 }
 
-@media (max-width: 950px) {
+@media (max-width: 980px) {
 	.head-center {
 		padding-top: 45px;
 	}
@@ -461,14 +459,24 @@ h3 {
 	}
 }
 
-@media (max-width: 480px) {
+@media (max-width: 520px) {
 	.nav-bar .langs {
 		display: none;
 	}
-	
+}
+
+@media (max-width: 480px) {
 	.nav-bar .navigation {
 		margin: 0 auto;
 		width: 100%;
+	}
+
+	.nav-bar .navigation .link-sep::after {
+		content: '|';
+	}
+
+	.nav-bar .navigation .nav-button {
+		margin: 0 0.25rem;
 	}
 }
 
@@ -481,6 +489,7 @@ h3 {
 	.social-link .text {
 		display: block;
 		text-align: center;
+		margin-left: 0;
 	}
 }
 
@@ -502,12 +511,8 @@ h3 {
 	}
 }
 
-/* This can't be in the print specific css file for some reason. */
 @media print {
-    .page-break {
-		page-break-before: always;
-		height: 0.5in;
-	}
+	@import 'pdf.scss';
 }
 
 .text-center-no-pdf {
@@ -539,5 +544,5 @@ h3 {
 // 	.skill {
 // 		background-color: #2e2e41;
 // 	}
-	
+
 // }

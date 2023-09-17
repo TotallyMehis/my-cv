@@ -1,18 +1,26 @@
+const EleventyPluginVite = require('@11ty/eleventy-plugin-vite')
+const path = require('path')
+const htmlPurge = require('vite-plugin-html-purgecss').default
+
 module.exports = function(eleventyConfig) {
-    eleventyConfig.addPassthroughCopy('src/img');
-    eleventyConfig.addPassthroughCopy({ 'src/misc/CNAME': 'CNAME' });
-    eleventyConfig.addPassthroughCopy({ 'src/misc/.nojekyll': '.nojekyll' });
-
-    eleventyConfig.setTemplateFormats([
-        'pug'
-    ]);
-
-    return {
-        dir: {
-            input: 'src',
-            output: '_site',
-
-            includes: 'includes'
+    eleventyConfig.addPlugin(EleventyPluginVite, {
+        viteOptions: {
+            build: {
+                cssMinify: 'lightningcss',
+                assetsInlineLimit: 0
+            },
+            resolve: {
+                alias: {
+                    '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
+                }
+            },
+            plugins: [
+                htmlPurge([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/ ])
+            ]
         }
-    };
-};
+    })
+
+    eleventyConfig.addPassthroughCopy('public/my-face.jpg')
+    eleventyConfig.addPassthroughCopy('public/CNAME')
+    eleventyConfig.addPassthroughCopy('public/.nojekyll')
+}

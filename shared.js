@@ -99,6 +99,7 @@ module.exports = {
         data.aboutMe = readSingle(readMarkdown, 'about_me.md');
         data.sections = mergeFunc(readYaml, 'sections.yml');
         data.wne = mergeFunc(readYaml, 'work_n_education.yml');
+        data.appUrl = 'https://cv.mehis.dev'
 
 
         // Translate markdown to html

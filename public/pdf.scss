@@ -1,7 +1,6 @@
-$break-border-color: #e6e6e6;
-$page-margin: 1.9cm;
-
 :root {
+    --page-margin: 1.9cm;
+    --break-border-color: #e6e6e6;
     --project-padding: 1rem;
 }
 
@@ -17,9 +16,14 @@ p {
     margin-bottom: 0.8rem;
 }
 
+.page-break {
+    page-break-before: always;
+    height: 0.5in;
+}
+
 .container {
-    padding-left: $page-margin;
-    padding-right: $page-margin;
+    padding-left: var(--page-margin);
+    padding-right: var(--page-margin);
 
     max-width: none !important;
 }
@@ -74,7 +78,7 @@ p {
 
 h2 {
     font-size: 1.5rem;
-    border-bottom: 1px solid $break-border-color;
+    border-bottom: 1px solid var(--break-border-color);
 }
 
 h3 {
