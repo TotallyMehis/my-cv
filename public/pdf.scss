@@ -123,41 +123,6 @@ h2.text-center {
     padding: 1rem 0 1rem 0;
 }
 
-.skill-text {
-    /* Hacky */
-    width: 80px;
-}
-
 .skill-ref {
     display: none;
-}
-
-.print-skill-do-columns {
-    column-count: 2;
-    margin: 1rem 0 0 0;
-}
-
-.print-skill-do-columns table {
-    display: inline;
-}
-
-.print-skill-do-columns tbody {
-    display: inline;
-}
-
-.print-skill-do-columns tr {
-    display: block;
-    margin: 0 auto;
-}
-
-.print-skill-do-columns td {
-    display: inline-block;
-}
-
-.print-skill-do-columns tr td:last-of-type {
-    /*float: right;*/
-}
-
-.text-center-no-pdf {
-	text-align: justify;
 }

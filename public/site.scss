@@ -12,16 +12,12 @@ html {
 	font-size: 0.9em;
 
 	scroll-behavior: smooth;
-
-	/* IMPORTANT: Fixes Chrome scrolling over body. */
-	overflow-x: hidden;
 }
 
 body {
 	margin: 0;
 	padding: 0;
-
-	overflow-x: hidden;
+	min-width: 200px;
 }
 
 a {
@@ -95,7 +91,7 @@ footer {
 
 .nav-bar .navigation .link-sep {
 	vertical-align: middle;
-	color: #00000015;
+	color: #ffffff20;
 	pointer-events: none;
 	user-select: none;
 }
@@ -127,10 +123,6 @@ footer {
 
 	font-size: 16pt;
 }
-
-/*.nav-bar .navigation .nav-button:first-child {
-	width: 50px;
-}*/
 
 .langs {
 	display: flex;
@@ -229,8 +221,6 @@ footer {
 }
 
 .section {
-	transition: 0.2s;
-
 	padding: var(--section-padding-top-bottom) 0 var(--section-padding-top-bottom) 0;
 }
 
@@ -265,87 +255,10 @@ h3 {
 	margin-bottom: 0rem;
 }
 
-/* Testing fade in bg img */
-/*
-.project .bg {
-	position: absolute;
-	top: 0;
-	width: 400px;
-	height: 100%;
-	z-index: -1;
-
-	right: 0;
-	background: linear-gradient(to left,rgba(255, 255, 255, 0) 0%, rgb(255, 255, 255) 100%, rgb(255, 255, 255) 100%), url('../img/bg001.jpg');
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-*/
-
 .tech-used {
 	margin-top: 0.5rem;
 	margin-bottom: 0.5rem;
 	font-weight: 900;
-}
-
-.skill-text {
-	padding-right: 0.5rem;
-}
-
-.skill-name {
-	display: inline-block;
-	vertical-align: middle;
-}
-
-.skill-specifics {
-	display: inline-block;
-	font-size: 0.8rem;
-	vertical-align: bottom;
-	margin-left: 0.1rem;
-}
-
-.highlight-web {
-	transition: 1s;
-	background-color: transparent;
-	--rgb: 0, 255, 0;
-}
-
-.highlight-systems {
-	transition: 1s;
-	background-color: transparent;
-	--rgb: 0, 0, 255;
-}
-
-.highlight-web.highlight-systems {
-	--rgb: 0, 255, 255;
-}
-
-.highlight-now {
-	background-color: rgba(var(--rgb),0.2);
-}
-
-.highlight-ref {
-	background-color: rgba(0, 0, 0, 0.2);
-}
-
-.project-highlight {
-	position: absolute;
-	top: 0;
-	height: 100%;
-
-	/* This can cause issues in some browsers.
-	So far fixed with html overflow-x hidden. */
-	margin-left: -50%;
-	width: 500%;
-
-	z-index: -1;
-
-	pointer-events: none;
-}
-
-.reference-list > * {
-	display: inline-block;
-	margin-left: 0.5em;
-	margin-right: 0.5em;
 }
 
 .skill {
@@ -370,42 +283,6 @@ h3 {
 	margin: 2rem 0 2rem 0;
 }
 
-/*
-	TODO: Replace this stuff
-*/
-.skill-ref[href='#project-zmr']::before {
-	content: '[1';
-}
-
-.skill-ref[href='#project-influx']::before {
-	content: '[2';
-}
-
-.skill-ref[href='#project-ezauto']::before {
-	content: '[3';
-}
-
-.skill-ref[href='#project-sfuws']::before {
-	content: '[4';
-}
-
-.skill-ref[href='#project-ssdb']::before {
-	content: '[5';
-}
-
-.skill-ref[href='#project-interview']::before {
-	content: '[6';
-}
-
-.skill-ref[href='#project-this-site']::before {
-	content: '[7';
-}
-
-.skill-ref::after {
-	content: ']';
-}
-
-
 .project {
 	border-bottom: 1px solid var(--break-border-color);
 
@@ -422,17 +299,12 @@ h3 {
 }
 
 .section.projects .project {
-	transition: 0.5s;
 	position: relative;
 	z-index: 0;
 }
 
 .project .anchor {
 	top: var(--project-anchor-padding);
-}
-
-.my-text-light {
-	color: #777777;
 }
 
 @media (max-width: 980px) {
@@ -511,10 +383,6 @@ h3 {
 
 @media print {
 	@import 'pdf.scss';
-}
-
-.text-center-no-pdf {
-	text-align: center;
 }
 
 // Dark mode
