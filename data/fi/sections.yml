@@ -8,7 +8,7 @@ aboutMe:
   name: Hieman minusta
 
 workAndEducation:
-  name: Työ & Koulutus
+  name: Työ & koulutus
 
 shortStuff:
   education: ICT, Insinööri
@@ -27,5 +27,5 @@ skills:
     - Scrum-prosessit ovat minulle tuttuja ja olen työskennellyt projekteissa jotka käyttävät niitä.
 
 projects:
-  name: Sivu Projekteja
+  name: Sivu projekteja
 

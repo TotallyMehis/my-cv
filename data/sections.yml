@@ -8,10 +8,10 @@ navbar:
   projects: Projects
 
 aboutMe:
-  name: About Me
+  name: About me
 
 workAndEducation:
-  name: Work & Education
+  name: Work & education
 
 shortStuff:
   education: ICT, Engineer
@@ -30,4 +30,4 @@ skills:
     - I am familiar with Scrum processes and have worked in projects using them.
 
 projects:
-  name: Side Projects
+  name: Side projects

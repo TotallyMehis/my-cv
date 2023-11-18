@@ -2,6 +2,10 @@ const EleventyPluginVite = require('@11ty/eleventy-plugin-vite')
 const path = require('path')
 const htmlPurge = require('vite-plugin-html-purgecss').default
 
+/**
+ * 
+ * @param {import('@11ty/eleventy').UserConfig} eleventyConfig 
+ */
 module.exports = function(eleventyConfig) {
     eleventyConfig.addPlugin(EleventyPluginVite, {
         viteOptions: {
