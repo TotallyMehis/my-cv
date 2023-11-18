@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="{{ translations.currentId if translations.currentId else 'en' }}">
+  <head>
+    <meta charset="UTF-8">
+    <title>Miikka Ylätalo</title>
+    <link rel="shortcut icon" type="image/png" href="/icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    {# SEO #}
+    <meta name="title" content="Miikka Ylätalo">
+    <meta name="description" content="Miikka Ylätalo’s CV site, showcasing various programming projects.">
+    <meta name="keywords" content="miikka, ylätalo, mehis, portfolio, cv, project">
+    <meta name="author" content="Miikka Ylätalo">
+    <meta name="thumbnail" content="{{ appUrl + '/my-face.jpg' }}">
+    <script type="application/ld+json">
+      {"@context":"http://schema.org","@type":"Person","name":"Miikka Ylätalo","image":"/my-face.jpg","logo":"/my-face.jpg","url":"{{ appUrl }}"}
+    </script>
+    {# Disable indexing for translations. #}
+    {% if translations.currentId != "" %}
+      <meta name="robots" content="noindex, follow" />
+    {% endif %}
+    {# Open Graph #}
+    <meta property="og:image" content="{{ appUrl + '/my-face.jpg' }}">
+
+    {# Site CSS #}
+    {# Includes bootstrap #}
+    {% block mycss %}
+      <link rel="stylesheet" type="text/css" href="/site.scss">
+    {% endblock %}
+  </head>
+  <body>
+    {# Site head #}
+    {% include "site-head.njk" %}
+
+    <main>
+      {# About Me #}
+      {% include "section-me.njk" %}
+
+      {# Skills #}
+      {% include "section-skills.njk" %}
+
+      <div class="page-break"></div>
+
+      {# Work & Education #}
+      {% include "section-work-n-education.njk" %}
+
+      {# Projects #}
+      {% include "section-projects.njk" %}
+    </main>
+
+    {# Footer #}
+    <footer class="text-center">
+      Site by Miikka Ylätalo<br>
+      Hosted on <a href="https://pages.github.com/" target="_blank">Github Pages</a><br>
+    </footer>
+    {# Non-blocking stuff last. #}
+    <script src="/nonblocking.js" async type="module"></script>
+  </body>
+</html>

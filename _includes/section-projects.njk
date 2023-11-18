@@ -1,0 +1,44 @@
+<section class="section projects">
+  <a id="projects" class="anchor"></a>
+  <div class="container">
+    <h2 class="text-center">{{ sections.projects.name }}</h2>
+    <div class="project-list">
+      {# _ is unused but must declared (Eleventy bug?) #}
+      {% for _, project in projects %}
+        {% set contclass = '' %}
+        {% if project.printHide %}
+          {% set contclass = 'no-print' %}
+        {% endif %}
+        {% if project.pageBreak %}
+          {% set contclass = contclass + ' last-before-page-break' %}
+        {% endif %}
+        <div class="project {{ contclass }}">
+          <h3>{{ project.name }}</h3>
+          {# Add possible links #}
+          {% if project.links %}
+            <span class="links no-print">
+              {% set linksep = false %}
+              {# Eleventy bug?? First one is for single element, second one is for multiple elements. #}
+              {% for link in project.links %}
+                <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+              {% endfor %}
+              {% for _, link in project.links %}
+                {% if linksep %}
+                  <span class="sep">/</span>
+                {% endif %}
+                <a href="{{ link.url }}" target="_blank">{{ link.name }}</a>
+                {% set linksep = true %}
+              {% endfor %}
+            </span>
+          {% endif %}
+          <div class="desc">{{ project.desc }}</div>
+          <div class="tech-used">{{ project.tech }}</div>
+          <div class="string">{{ project.text }}</div>
+        </div>
+        {% if project.pageBreak %}
+          <div class="page-break"></div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

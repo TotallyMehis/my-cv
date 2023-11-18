@@ -1,0 +1,22 @@
+<section class="section skills">
+  <a id="skills" class="anchor"></a>
+  <div class="container">
+    <h2 class="text-center">{{ sections.skills.name }}</h2>
+    <ul>
+      {% for skill in sections.skills.content %}
+        <li>{{ skill | safe }}</li>
+      {% endfor %}
+    </ul>
+    {# _ is unused but must declared (Eleventy bug?) #}
+    {% for _, skillList in skillLists %}
+      <div class="skill-list-container">
+        <h3>{{ skillList.name }}</h3>
+        <div class="skill-list">
+          {% for skill in skillList.skills %}
+            <span class="skill">{{ skill.name }}</span>
+          {% endfor %}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

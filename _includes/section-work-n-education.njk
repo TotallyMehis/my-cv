@@ -1,0 +1,14 @@
+<section class="section work-n-education">
+  <a id="work-n-education" class="anchor"></a>
+  <div class="container">
+    <h2 class="text-center">{{ sections.workAndEducation.name }}</h2>
+    {# _ is unused but must declared (Eleventy bug?) #}
+    {% for _, we in wne %}
+      <div class="project">
+        <h3>{{ we.name }}</h3>
+        <div>{{ we.time }}</div>
+        <div>{{ we.description }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

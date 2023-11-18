@@ -58,7 +58,8 @@ ezauto:
   tech: C++, Reverse Engineering
   text: Reads game memory and reacts accordingly, sending inputs to OS.
   links:
-    - name: Github
+    github:
+      name: Github
       url: https://github.com/TotallyMehis/EzAuto
 #
 #
@@ -69,7 +70,8 @@ this-site:
   tech: NodeJS, Eleventy
   text: A static Bootstrap site built with Eleventy. Print compatible. Hosted on Github Pages.
   links:
-    - name: Github
+    github:
+      name: Github
       url: https://github.com/TotallyMehis/my-cv
 #
 #
@@ -80,5 +82,6 @@ ssdb:
   tech: Python, Async, Linux
   text: Queries Valve master servers & game servers, and updates the server list whenever needed.
   links:
-    - name: Github
+    github:
+      name: Github
       url: https://github.com/TotallyMehis/source-serverlist-discordbot

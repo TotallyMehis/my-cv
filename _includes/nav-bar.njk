@@ -1,0 +1,34 @@
+<div id="nav-bar" class="nav-bar position-absolute">
+  <span class="navigation">
+    <span class="nav-button" id="link-top">
+      <a href="#">
+        <svg class="align-baseline bi bi-caret-up-fill" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+        </svg>
+      </a>
+    </span>
+    <span class="link-sep"></span>
+    <span class="nav-button" id="link-me">
+      <a href="#me">{{ sections.navbar.me }}</a>
+    </span>
+    <span class="link-sep"></span>
+    <span class="nav-button" id="link-skills">
+      <a href="#skills">{{ sections.navbar.skills }}</a>
+    </span>
+    <span class="link-sep"></span>
+    <span class="nav-button" id="link-work">
+      <a href="#work-n-education">{{ sections.navbar.workAndEducation }}</a>
+    </span>
+    <span class="link-sep"></span>
+    <span class="nav-button" id="#link-stuff">
+      <a href="#projects">{{ sections.navbar.projects }}</a>
+    </span>
+  </span>
+  <span class="langs">
+    {% for lang in translations.langs %}
+      {% if lang.id != translations.currentId %}
+        <a class="langs-button" href="{{ lang.link }}" title="{{ lang.description }}" aria-label="{{ lang.description }}" lang="{{ lang.id if lang.id else 'en' }}">{{ lang.shortname }}</a>
+      {% endif %}
+    {% endfor %}
+  </span>
+</div>
