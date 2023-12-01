@@ -1,0 +1,4 @@
+Sitemap: https://cv.mehis.dev/sitemap.xml
+
+User-agent: *
+Disallow:
