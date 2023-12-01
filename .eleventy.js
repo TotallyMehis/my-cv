@@ -27,4 +27,6 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy('public/my-face.jpg')
     eleventyConfig.addPassthroughCopy('public/CNAME')
     eleventyConfig.addPassthroughCopy('public/.nojekyll')
+    eleventyConfig.addPassthroughCopy('public/sitemap.xml')
+    eleventyConfig.addPassthroughCopy('public/robots.txt')
 }
