@@ -17,6 +17,7 @@
     "markdown-it": "^13.0.1",
     "sass": "^1.57.1",
     "vite-plugin-html-purgecss": "^0.1.1",
+    "vite-plugin-minify": "^1.5.2",
     "yaml": "^2.3.4"
   },
   "dependencies": {

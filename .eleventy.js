@@ -1,6 +1,7 @@
 const EleventyPluginVite = require('@11ty/eleventy-plugin-vite')
 const path = require('path')
 const htmlPurge = require('vite-plugin-html-purgecss').default
+const ViteMinifyPlugin = require('vite-plugin-minify').default
 
 /**
  * 
@@ -19,7 +20,8 @@ module.exports = function (eleventyConfig) {
         }
       },
       plugins: [
-        htmlPurge([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/])
+        htmlPurge([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/]),
+        ViteMinifyPlugin()
       ]
     }
   })
