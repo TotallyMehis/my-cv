@@ -6,27 +6,27 @@ const htmlPurge = require('vite-plugin-html-purgecss').default
  * 
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig 
  */
-module.exports = function(eleventyConfig) {
-    eleventyConfig.addPlugin(EleventyPluginVite, {
-        viteOptions: {
-            build: {
-                cssMinify: 'lightningcss',
-                assetsInlineLimit: 0
-            },
-            resolve: {
-                alias: {
-                    '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
-                }
-            },
-            plugins: [
-                htmlPurge([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/ ])
-            ]
+module.exports = function (eleventyConfig) {
+  eleventyConfig.addPlugin(EleventyPluginVite, {
+    viteOptions: {
+      build: {
+        cssMinify: 'lightningcss',
+        assetsInlineLimit: 0
+      },
+      resolve: {
+        alias: {
+          '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
         }
-    })
+      },
+      plugins: [
+        htmlPurge([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/])
+      ]
+    }
+  })
 
-    eleventyConfig.addPassthroughCopy('public/my-face.jpg')
-    eleventyConfig.addPassthroughCopy('public/CNAME')
-    eleventyConfig.addPassthroughCopy('public/.nojekyll')
-    eleventyConfig.addPassthroughCopy('public/sitemap.xml')
-    eleventyConfig.addPassthroughCopy('public/robots.txt')
+  eleventyConfig.addPassthroughCopy('public/my-face.jpg')
+  eleventyConfig.addPassthroughCopy('public/CNAME')
+  eleventyConfig.addPassthroughCopy('public/.nojekyll')
+  eleventyConfig.addPassthroughCopy('public/sitemap.xml')
+  eleventyConfig.addPassthroughCopy('public/robots.txt')
 }
