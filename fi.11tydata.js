@@ -1,4 +1,3 @@
-const utils = require('./shared');
+import { readData } from './shared.js';
 
-
-module.exports = utils.readData('fi');
+export default readData('fi');

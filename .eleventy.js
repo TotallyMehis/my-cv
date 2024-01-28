@@ -1,13 +1,13 @@
-const EleventyPluginVite = require('@11ty/eleventy-plugin-vite')
-const path = require('path')
-const htmlPurge = require('vite-plugin-html-purgecss').default
-const ViteMinifyPlugin = require('vite-plugin-minify').default
+import EleventyPluginVite from '@11ty/eleventy-plugin-vite'
+import path from 'path'
+import htmlPurge from 'vite-plugin-html-purgecss'
+import { ViteMinifyPlugin } from 'vite-plugin-minify'
 
 /**
  * 
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig 
  */
-module.exports = function (eleventyConfig) {
+export default function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyPluginVite, {
     viteOptions: {
       build: {
@@ -16,11 +16,11 @@ module.exports = function (eleventyConfig) {
       },
       resolve: {
         alias: {
-          '~bootstrap': path.resolve(__dirname, 'node_modules/bootstrap')
+          '~bootstrap': path.resolve(path.dirname(''), 'node_modules/bootstrap')
         }
       },
       plugins: [
-        htmlPurge([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/]),
+        htmlPurge.default([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/]),
         ViteMinifyPlugin()
       ]
     }

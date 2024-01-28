@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "npx @11ty/eleventy",
     "dev": "npx @11ty/eleventy --serve --incremental"
@@ -10,8 +11,8 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0",
-    "@11ty/eleventy-plugin-vite": "^4.0.0",
+    "@11ty/eleventy": "3.0.0-alpha.17",
+    "@11ty/eleventy-plugin-vite": "5.0.0-alpha.1",
     "deepmerge": "^4.3.0",
     "lightningcss": "^1.21.8",
     "markdown-it": "^13.0.1",
