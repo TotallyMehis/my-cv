@@ -1,34 +1,60 @@
-import EleventyPluginVite from '@11ty/eleventy-plugin-vite'
-import path from 'path'
-import htmlPurge from 'vite-plugin-html-purgecss'
-import { ViteMinifyPlugin } from 'vite-plugin-minify'
+import esbuild from 'esbuild'
+import { sassPlugin } from 'esbuild-sass-plugin'
+import { minify } from 'html-minifier'
+import { PurgeCSS } from 'purgecss'
+import { promises as fs } from 'fs'
 
 /**
  * 
  * @param {import('@11ty/eleventy').UserConfig} eleventyConfig 
  */
 export default function (eleventyConfig) {
-  eleventyConfig.addPlugin(EleventyPluginVite, {
-    viteOptions: {
-      build: {
-        cssMinify: 'lightningcss',
-        assetsInlineLimit: 0
-      },
-      resolve: {
-        alias: {
-          '~bootstrap': path.resolve(path.dirname(''), 'node_modules/bootstrap')
-        }
-      },
-      plugins: [
-        htmlPurge.default([ /*'highlight-ref',*/ 'sticky', 'position-absolute'/*, /skill-ref/i*/]),
-        ViteMinifyPlugin()
-      ]
+  const isDevelopment = false // process.env.ELEVENTY_RUN_MODE !== 'build'
+
+  eleventyConfig.addPassthroughCopy('assets')
+  eleventyConfig.addPassthroughCopy({ 'misc/.nojekyll': '.nojekyll' })
+  eleventyConfig.addPassthroughCopy({ 'misc/CNAME': 'CNAME' })
+  eleventyConfig.addPassthroughCopy({ 'misc/robots.txt': 'robots.txt' })
+  eleventyConfig.addPassthroughCopy({ 'misc/sitemap.xml': 'sitemap.xml' })
+
+  eleventyConfig.addWatchTarget('./css/')
+  eleventyConfig.addWatchTarget('./js/')
+
+  eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
+    if (outputPath.endsWith('.html')) {
+      return minify(content, {
+        collapseBooleanAttributes: true,
+        collapseWhitespace: true,
+        removeComments: true,
+        useShortDoctype: true
+      })
     }
+
+    return content
   })
 
-  eleventyConfig.addPassthroughCopy('public/my-face.jpg')
-  eleventyConfig.addPassthroughCopy('public/CNAME')
-  eleventyConfig.addPassthroughCopy('public/.nojekyll')
-  eleventyConfig.addPassthroughCopy('public/sitemap.xml')
-  eleventyConfig.addPassthroughCopy('public/robots.txt')
+  eleventyConfig.on('afterBuild', async () => {
+    await esbuild.build({
+      entryPoints: ['css/site.scss', 'js/nonblocking.js'],
+      outdir: '_site/assets',
+      minify: !isDevelopment,
+      sourcemap: isDevelopment,
+      plugins: [sassPlugin()]
+    })
+
+    if (!isDevelopment) {
+      console.log('Purging CSS...')
+
+      const purgeResult = await new PurgeCSS().purge({
+        content: ['_site/**/*.html'],
+        css: ['_site/**/*.css'],
+        safelist: ['sticky', 'position-absolute'],
+        variables: true
+      })
+      await Promise.all(purgeResult.map(res => {
+        console.log('Overwriting purged file', res.file)
+        fs.writeFile(res.file, res.css)
+      }))
+    }
+  })
 }

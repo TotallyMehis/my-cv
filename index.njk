@@ -3,28 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <title>Miikka Ylätalo - CV</title>
-    <link rel="shortcut icon" type="image/png" href="/icon.png">
+    <link rel="shortcut icon" type="image/png" href="/assets/icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     {# SEO #}
     <meta name="title" content="Miikka Ylätalo | CV">
     <meta name="description" content="My CV site. Work, education and showcasing various programming projects.">
     <meta name="keywords" content="miikka, ylätalo, mehis, portfolio, cv, project">
     <meta name="author" content="Miikka Ylätalo">
-    <meta name="thumbnail" content="{{ appUrl + '/my-face.jpg' }}">
+    <meta name="thumbnail" content="{{ appUrl + '/assets/my-face.jpg' }}">
     <script type="application/ld+json">
-      {"@context":"http://schema.org","@type":"Person","name":"Miikka Ylätalo","image":"/my-face.jpg","url":"{{ appUrl }}"}
+      {"@context":"http://schema.org","@type":"Person","name":"Miikka Ylätalo","image":"/assets/my-face.jpg","url":"{{ appUrl }}"}
     </script>
     {# Disable indexing for translations. #}
     {% if translations.currentId != "" %}
       <meta name="robots" content="noindex, follow" />
     {% endif %}
     {# Open Graph #}
-    <meta property="og:image" content="{{ appUrl + '/my-face.jpg' }}">
+    <meta property="og:image" content="{{ appUrl + '/assets/my-face.jpg' }}">
 
     {# Site CSS #}
     {# Includes bootstrap #}
     {% block mycss %}
-      <link rel="stylesheet" type="text/css" href="/site.scss">
+      <link rel="stylesheet" type="text/css" href="/assets/css/site.css">
     {% endblock %}
   </head>
   <body>
@@ -53,6 +53,6 @@
       Hosted on <a href="https://pages.github.com/" target="_blank">Github Pages</a><br>
     </footer>
     {# Non-blocking stuff last. #}
-    <script src="/nonblocking.js" async type="module"></script>
+    <script src="/assets/js/nonblocking.js" async></script>
   </body>
 </html>

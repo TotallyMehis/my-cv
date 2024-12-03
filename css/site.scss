@@ -1,4 +1,5 @@
-@import '~bootstrap/scss/bootstrap';
+@use '~bootstrap/scss/bootstrap';
+@use 'pdf.scss';
 
 :root {
 	--section-padding-top-bottom: 3rem;
@@ -26,10 +27,10 @@ a {
 }
 
 a.anchor {
-    display: block;
-    position: relative;
-    top: calc(-1 * (var(--navbar-height) + var(--section-padding-top-bottom)));
-    visibility: hidden;
+	display: block;
+	position: relative;
+	top: calc(-1 * (var(--navbar-height) + var(--section-padding-top-bottom)));
+	visibility: hidden;
 }
 
 h2 {
@@ -47,13 +48,13 @@ footer {
 	max-width: 700px;
 }
 
-.container > ul {
-    padding-left: 1rem;
+.container>ul {
+	padding-left: 1rem;
 }
 
 /* Hide pdf/print-only elements. */
 .in-print {
-    display: none !important;
+	display: none;
 }
 
 .links .sep {
@@ -74,7 +75,8 @@ footer {
 	border-bottom: 1px solid var(--break-border-color);
 	z-index: 100;
 
-	pointer-events: auto; /* Re-enable pointer events. */
+	pointer-events: auto;
+	/* Re-enable pointer events. */
 }
 
 .nav-bar {
@@ -82,10 +84,11 @@ footer {
 	width: 100%;
 	overflow: hidden;
 
-	pointer-events: none; /* We're invisible, so disable pointer events for me. */
+	pointer-events: none;
+	/* We're invisible, so disable pointer events for me. */
 }
 
-.nav-bar > * {
+.nav-bar>* {
 	pointer-events: auto;
 }
 
@@ -146,12 +149,12 @@ footer {
 }
 
 .nav-bar button:hover {
-	background-color: rgba(var(--rgb),0.2);
+	background-color: rgba(var(--rgb), 0.2);
 }
 
 
 .nav-bar button.pressed {
-	background-color: rgba(var(--rgb),0.3);
+	background-color: rgba(var(--rgb), 0.3);
 }
 
 #highlight-toggle-web {
@@ -179,12 +182,12 @@ footer {
 }
 
 .head-center .title {
-    text-align: center;
+	text-align: center;
 	font-weight: 300;
 }
 
 .head-center .sub-title {
-    text-align: center;
+	text-align: center;
 	font-size: 1.25rem;
 	font-weight: 300;
 	color: #444;
@@ -290,7 +293,7 @@ h3 {
 	padding-bottom: var(--project-padding);
 }
 
-.project ~ .project {
+.project~.project {
 	padding-top: var(--project-padding);
 }
 
@@ -379,10 +382,6 @@ h3 {
 	.nav-bar .navigation .nav-button {
 		font-size: 10pt;
 	}
-}
-
-@media print {
-	@import 'pdf.scss';
 }
 
 // Dark mode
