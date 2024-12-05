@@ -142,14 +142,14 @@ export function readData(lang = '') {
         id: '',
         shortname: 'en',
         name: 'english',
-        link: 'index.html',
+        link: '/',
         description: 'Change language to English.'
       },
       {
         id: 'fi',
         shortname: 'fi',
         name: 'finnish',
-        link: 'fi.html',
+        link: '/fi/',
         description: 'Vaihda suomen kieleksi.'
       }
     ]
