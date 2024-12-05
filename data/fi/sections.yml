@@ -18,9 +18,9 @@ shortStuff:
 skills:
   name: Taidot
   content:
-    - Olen **pätevä monessa ohjelmointikielessä**, kuten C/C++, Javascript ja Python.
-    - Olen **kehittänyt natiivi-ohjelmia**, usein tukien useita alustoja.
-    - '**Web-kehitys** & NodeJS-ekosysteemi ovat minulle tuttuja.' 
+    - Olen **pätevä monessa ohjelmointikielessä**, kuten C/C++, Java ja JavaScript.
+    - Olen **kehittänyt natiivi-ohjelmia**, jotka tukee Windowsia ja Linuxia.
+    - '**Web-kehitys** & NodeJS-ekosysteemi ovat minulle tuttuja.'
     - Olen **nopea ja itsenäinen oppija**.
     - Olen työskennellyt useassa projektissa ja eri rooleissa.
     - Olen **rakentanut continuous integration ja deployment pipelinejä**.

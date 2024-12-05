@@ -11,8 +11,13 @@ tools:
 #
 #
 #
-tech:
+frameworks:
   name: Frameworkit
+#
+#
+#
+frontend:
+  name: Front-end
 #
 #
 #

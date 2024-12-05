@@ -85,7 +85,7 @@
     }
 
     h3 {
-        font-size: 1.2rem;
+        font-size: 1.2rem !important;
     }
 
     .head-center {
@@ -97,11 +97,11 @@
     }
 
     .head-center .title {
-        text-align: left;
+        text-align: left !important;
     }
 
     .head-center .sub-title {
-        text-align: left;
+        text-align: left !important;
     }
 
     .head-center>* {
