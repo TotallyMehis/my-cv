@@ -13,11 +13,11 @@
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "deepmerge": "^4.3.0",
-    "esbuild": "^0.25.1",
-    "esbuild-sass-plugin": "^3.3.1",
+    "esbuild": "^0.28.1",
+    "esbuild-sass-plugin": "^3.7.0",
     "html-minifier": "^4.0.0",
-    "markdown-it": "^13.0.1",
-    "purgecss": "^7.0.2",
+    "markdown-it": "^14.0.0",
+    "purgecss": "^8.0.0",
     "yaml": "^2.6.1"
   },
   "dependencies": {
